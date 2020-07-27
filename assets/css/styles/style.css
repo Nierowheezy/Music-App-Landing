@@ -1,0 +1,421 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 10px;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap'); */
+
+/* @font-face {
+  font-family: 'Gilroy-Bold ☞';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gilroy-Bold ☞'), url('./Gilroy/Gilroy-Bold.woff') format('woff');
+} */
+
+@font-face {
+  font-family: 'Covered By Your Grace';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Covered By Your Grace'),
+    url('../fonts/coveredbyyourgracefont/CoveredByYourGrace400.ttf');
+}
+
+body {
+  line-height: 1.7;
+  color: #777;
+  box-sizing: border-box;
+  background-color: #02101b;
+}
+
+.gilroy-font-bold {
+  font-family: 'Gilroy-Bold ☞';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.gilroy-font-light {
+  font-family: 'Gilroy-Light ☞';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.gilroy-font-regular {
+  font-family: 'Gilroy-Regular ☞';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.logo-font {
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+}
+
+.navbar {
+  padding: 1.8rem;
+  background-color: #02101b;
+}
+
+.nav-link {
+  line-height: 1.2rem;
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #a535b6 !important;
+}
+
+.nav-link-active {
+  color: #a535b6 !important;
+}
+
+/* .nav-color-active:hover {
+  color: #a535b6;
+} */
+
+.hero-image {
+  height: 100vh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(184, 53, 174, 0) 0%,
+      rgba(56, 53, 199, 0.25) 99.98%,
+      rgba(56, 53, 199, 0.25) 99.99%
+    ),
+    url(../../images/bg-img.png);
+  background-size: cover;
+  background-position: top;
+}
+
+/* header-text main container */
+
+.text-box {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* header-text main container */
+
+/* primary heading */
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  /* margin-bottom: 6rem; */
+  backface-visibility: hidden;
+}
+
+.header-primary-font {
+  width: 93.8rem;
+  font-family: 'Covered By Your Grace', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6rem;
+  line-height: 10.8rem;
+}
+
+.heading-primary-main {
+  display: inline-block;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+/* LINING PARK  Animation */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+/* LINING PARK  Animation */
+
+.btn-buy-ticket:link,
+.btn-buy-ticket:visited {
+  background: linear-gradient(to bottom, #c735b1, #4135c7);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  width: 23.3rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  animation: moveInButton.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+  display: inline-block;
+  position: relative;
+}
+
+.btn-buy-ticket:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-buy-ticket:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-buy-ticket::after {
+  content: '';
+  display: inline-block;
+  background: linear-gradient(to bottom, #c735b1, #4135c7);
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.2rem;
+  border-radius: 5rem;
+  width: 23.3rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-buy-ticket:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* Animation */
+
+/* button animation keyframe */
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+
+/*end  button animation keyframe */
+
+/* Button Section */
+
+.center-image {
+  cursor: pointer;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+.header-paragraph {
+  font-size: 2rem;
+  margin-top: 2rem;
+  line-height: 2.3rem;
+  font-weight: 100;
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+/* Animation lower text */
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
+}
+
+.store-images-size {
+  padding-right: 2rem;
+}
+
+/* Animation */
+
+/* main section starts here */
+main {
+  margin-bottom: 10rem;
+}
+
+.center {
+  margin: 0 auto;
+  padding-right: 2rem;
+}
+.center-line {
+  margin-top: 8rem;
+  border: 0.2rem solid #a635b6;
+  /* border-radius: px; */
+  width: 33rem;
+  margin: 0 auto;
+}
+
+.featured-mintute-text {
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+.featured-podcast-text {
+  margin-bottom: 6rem;
+  font-size: 3.5rem;
+  line-height: 4.1rem;
+}
+
+.position-parent {
+  position: relative;
+}
+
+.play-position {
+  position: absolute;
+  top: 33%;
+  left: 42%;
+  cursor: pointer;
+}
+
+.linking-park-paragraph-text {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.btn-watch-now {
+  background: linear-gradient(to bottom, #c735b1, #4135c7);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  width: 14.3rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.center-space-1 {
+  margin-top: 8rem;
+}
+
+.center-space {
+  margin-top: 12rem;
+}
+
+.next-concert-text {
+  font-size: 1.7rem;
+}
+
+.ticket-image-size {
+  height: 13.2rem;
+}
+
+.ticket-date-h1 {
+  font-size: 8rem;
+  line-height: 6.4rem;
+  color: #43474a;
+}
+.ticket-date-h4 {
+  font-size: 2rem;
+  color: #43474a;
+}
+.ticket-color {
+  color: #9d35b7;
+}
+
+.ticket-perfoming-text-p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.ticket-border {
+  border: 4px solid #9d35b7;
+}
+.ticket-perfoming-black-color {
+  color: black;
+}
+
+.ticket-perfoming-text-p2 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+/* main section ends here*/
+
+/* footer */
+
+.custom-wrapper {
+  margin-top: 2rem;
+  /* padding: 1.5rem 8.75rem; */
+}
+
+.footer {
+  height: 50vh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(184, 53, 174, 0) 0%,
+      rgba(56, 53, 199, 0.25) 99.98%,
+      rgba(56, 53, 199, 0.25) 99.99%
+    ),
+    url(../../images/purple-fireworks-blurred.png);
+  background-size: cover;
+  background-position: center;
+}
+/* footer ends here */
+
+/* Back to top button */
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: #188ed2;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  padding-top: 12px;
+  color: #fff;
+}
